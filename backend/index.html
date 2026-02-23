@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maa RDD Aarogya Sadan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Maa RDD Aarogya Sadan</div>
+            <ul class="nav-links">
+                <li><a href="#doctors">Our Doctors</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#booking">Book Appointment</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="cta-button" onclick="scrollToSection('booking')">Book Now</button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Your Health, Our Priority</h1>
+            <p>Premier healthcare delivered with compassion and expertise</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('booking')">Book Appointment</button>
+                <button class="btn-secondary" onclick="scrollToSection('doctors')">Meet Our Doctors</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOCTORS SECTION -->
+    <div class="container" id="doctors">
+        <h2 class="section-title">Our Medical Team</h2>
+        <p class="section-subtitle">Experienced healthcare professionals dedicated to your wellbeing</p>
+        
+        <div class="doctors-grid">
+            <div class="doctor-card">
+                <div class="doctor-image">👨‍⚕️</div>
+                <div class="doctor-info">
+                    <div class="doctor-name">Dr. Rakesh Gupta</div>
+                    <div class="doctor-specialty">General Medicine</div>
+                    <div class="doctor-experience">40+ years experience</div>
+                    <div class="doctor-bio">Specializing in comprehensive healthcare and patient wellness with a dedicated approach.</div>
+                    <div class="doctor-rating">★★★★★ (4.9/5)</div>
+                </div>
+            </div>
+
+            <div class="doctor-card">
+                <div class="doctor-image">👨‍⚕️</div>
+                <div class="doctor-info">
+                    <div class="doctor-name">Dr. Ashish Ranjan</div>
+                    <div class="doctor-specialty">Pediatrics</div>
+                    <div class="doctor-experience">8+ years experience</div>
+                    <div class="doctor-bio">Expert in child healthcare and pediatric care with specialized treatment for infants and children.</div>
+                    <div class="doctor-rating">★★★★★ (4.92/5)</div>
+                </div>
+            </div>
+
+            <div class="doctor-card">
+                <div class="doctor-image">👩‍⚕️</div>
+                <div class="doctor-info">
+                    <div class="doctor-name">Dr. Shalini Krishna</div>
+                    <div class="doctor-specialty">Ophthalmology</div>
+                    <div class="doctor-experience">5+ years experience</div>
+                    <div class="doctor-bio">Specialized eye care with expertise in vision correction, eye diseases, and advanced eye surgery.</div>
+                    <div class="doctor-rating">★★★★★ (4.93/5)</div>
+                </div>
+            </div>
+
+            
+           
+
+            
+        </div>
+    </div>
+
+    <!-- SERVICES SECTION -->
+    <div class="container" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Comprehensive healthcare solutions tailored to your needs</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🏥</div>
+                <h3>General Consultation</h3>
+                <p>Professional medical consultations for diagnosis and treatment planning with experienced physicians.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔬</div>
+                <h3>Laboratory Tests</h3>
+                <p>Advanced diagnostic testing with quick turnaround times and accurate results for preventive care.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📋</div>
+                <h3>Health Check-ups</h3>
+                <p>Comprehensive wellness programs designed to monitor and maintain optimal health conditions.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💉</div>
+                <h3>Vaccinations</h3>
+                <p>Complete immunization services including routine and travel vaccines for all age groups.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📺</div>
+                <h3>Telemedicine</h3>
+                <p>Remote consultations available for your convenience, connecting with doctors from home.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🩺</div>
+                <h3>Specialist Care</h3>
+                <p>Access to specialized medical professionals for complex health conditions and treatments.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- APPOINTMENT BOOKING -->
+    <div class="container" id="booking">
+        <h2 class="section-title">Book Your Appointment</h2>
+        <p class="section-subtitle">Schedule a consultation with our experienced healthcare professionals</p>
+        
+        <div class="booking-section">
+            <div class="success-message" id="successMessage">
+                ✓ Appointment booked successfully! We'll contact you shortly to confirm.
+            </div>
+            
+            <form id="bookingForm" onsubmit="handleBooking(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+91 9835067876">
+                    </div>
+                    <div class="form-group">
+                        <label for="doctor">Select Doctor</label>
+                        <select id="doctor" name="doctor" required>
+                            <option value="">-- Choose a doctor --</option>
+                            <option value="rakesh-gupta">Dr. Rakesh Gupta (General Medicine)</option>
+                            <option value="ashish-ranjan">Dr. Ashish Ranjan (Pediatrics)</option>
+                            <option value="shalini-krishna">Dr. Shalini Krishna (Ophthalmology)</option>
+                            <option value="emily-watson">Dr. Emily Watson (Dermatology)</option>
+                            <option value="david-kumar">Dr. David Kumar (Neurology)</option>
+                            <option value="lisa-anderson">Dr. Lisa Anderson (General Medicine)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time</label>
+                        <select id="time" name="time" required>
+                            <option value="">-- Select time --</option>
+                            <option value="09:00">9:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="02:00">2:00 PM</option>
+                            <option value="03:00">3:00 PM</option>
+                            <option value="04:00">4:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">Reason for Visit</label>
+                    <textarea id="reason" name="reason" placeholder="Describe your symptoms or reason for visit..." required></textarea>
+                </div>
+
+                <button type="submit" class="booking-submit">Book Appointment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Maa RDD Aarogya Sadan</h4>
+                <p>Providing exceptional healthcare with compassion and expertise.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <a href="#doctors">Our Doctors</a>
+                <a href="#services">Services</a>
+                <a href="#booking">Book Appointment</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Info</h4>
+                <p>📞 +91 98350 67876</p>
+                <p>📧 info@aarogyasadan.com</p>
+                <p>📍 Basudeopur Chaputa, Hajipur, Vaishali, Bihar 844102</p>
+            </div>
+            <div class="footer-column">
+                <h4>Hours</h4>
+                <p>Monday - Friday: 6:00 AM - 10:00 PM</p>
+                <p>Sunday: 10:00 AM - 10:00 PM</p>
+                <p>Saturday: Closed</p>
+            </div>
+        </div>
+        <div class="footer-divider">
+            <p>&copy; 2026 Maa RDD Aarogya Sadan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script-backend.js"></script>
+</body>
+</html>
