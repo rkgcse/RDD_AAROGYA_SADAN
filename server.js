@@ -203,7 +203,7 @@ const sendAdminEmail = async (appointment) => {
 // ROUTES
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(__dirname + '/index.html');
 });
 // Health Check
 app.get('/api/health', (req, res) => {
