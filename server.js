@@ -202,7 +202,12 @@ const sendAdminEmail = async (appointment) => {
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // ROUTES
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
+app.get('/', (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: '🚀 Maa RDD Aarogya Sadan Backend is Running Successfully'
+    });
+});
 // Health Check
 app.get('/api/health', (req, res) => {
     res.json({ message: '✅ Server is running' });
