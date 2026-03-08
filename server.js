@@ -415,5 +415,5 @@ app.use((err, req, res, next) => {
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`\n✅ Server running on http://localhost:${PORT}\n`);
+    console.log(`\n✅ Server running on https://rdd-aarogya-sadan-1.onrender.com:${PORT}\n`);
 });
