@@ -5,7 +5,7 @@
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 // Change this to your backend URL
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://rdd-aarogya-sadan.onrender.com/api';
 
 // For production, use:
 // const API_URL = 'https://your-production-url.com/api';
